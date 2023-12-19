@@ -14,7 +14,7 @@ async def on_ready():
     print(f'Successful Logged in as {client.user.name}')
     print("------------------------------------")
 
-#Command that triggers when you write "!hello"
+#Command that triggers when you write "!embedmessage"
 @client.event
 async def on_message(message):
     if message.content.startswith('!embedmessage'):
