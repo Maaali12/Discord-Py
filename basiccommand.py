@@ -19,6 +19,7 @@ async def on_ready():
 async def on_message(message):
     if message.content.startswith('!hello'):
         await message.channel.send("Hello!")
+        await message.delete() #deletes the message that triggered the command
 
 #Run the bot with your token
 client.run(bot_token)
