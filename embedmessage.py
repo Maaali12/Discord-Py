@@ -17,7 +17,7 @@ async def on_ready():
 #Command that triggers when you write "!hello"
 @client.event
 async def on_message(message):
-    if message.content.startswith('!mcserver'):
+    if message.content.startswith('!embedmessage'):
 
         embedVar = discord.Embed(title="**This is a Embed Message**", description="", color=0xD88E61)
         embedVar.add_field(name="**Hello**", value="Hello World", inline=False)
@@ -25,7 +25,6 @@ async def on_message(message):
 
         await message.delete() #deletes the message that triggered the command
         await message.channel.send(embed=embedVar)
-
 
 #Run the bot with your token
 client.run(bot_token)
